@@ -1,0 +1,29 @@
+<header>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-center">{{title}}</h1>
+        </div>
+    </div>
+</header>
+
+<main id="mbody">
+    <button (click)="getLocations()">Get Locations</button>
+    <div *ngFor="let location as locations | async">
+        {{ location }}
+    </div>
+    <!-- <div class="location"><span id="city"></span>, <span id="country"></span></div>
+    <div class="col-md-6">
+        <div class="temp"></div>
+        <div class="humidity"></div>
+        <div class="status"></div>
+    </div>
+    <div class="col-md-6">
+        <div class="weather-icon"></div>
+    </div>
+    
+    <div class="alert">Your browser doesn't support geolocation or you are using chrome v50+</div> -->
+</main>
+
+<footer class="navbar-fixed-bottom">
+    <p class="text-center">Created by <a href="#">Angelos Giannourakos</a> &copy <span id="year"><script> document.write(new Date().getFullYear());</script></span></p>
+</footer>

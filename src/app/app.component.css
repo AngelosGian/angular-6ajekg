@@ -1,0 +1,67 @@
+body { 
+	font-family: 'Roboto', sans-serif;
+	font-size: 18px;
+	color: #222222;
+	background: black;
+}
+#mbody{
+	width: 500px;
+	height:250px;
+	margin: 50px auto 0 auto;
+	background: rgba(255, 255, 255, .4);
+	text-align: center;
+}
+/* .col-md-6{
+	background: rgba(255, 255, 255, .4);
+} */
+.alert{
+	color: red;
+	display:none;
+}
+header{
+	background: #333333;
+	color: white;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.6);
+}
+
+footer {
+	padding: 10px;
+	background: #333333;
+	height: 50px;
+	color: white;
+	box-shadow: 0 -2px 3px rgba(0, 0, 0, 0.6);
+}
+.location {
+	font-size: 34px;
+	color: #cfcfcf;
+	padding: 25px;
+	background: #0f5bcc;
+}
+.temp {
+	margin: 0 auto;
+	width: 125px;
+	font-weight: bold;
+	font-size: 28px;
+	padding: 10px;
+	cursor: pointer;
+}
+.temp:hover {
+	color: #0f5bcc;
+}
+.status {
+	text-transform: capitalize;
+}
+
+.humidity, .status, .weather-icon{
+	padding: 10px;
+}
+
+.wi-humidity{
+	font-size: 28px;
+	color: #0f5bcc;
+}
+
+.weather-icon{
+	font-size: 5.125em;
+	color: #0f5bcc;
+}
