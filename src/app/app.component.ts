@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 // import { ApiService } from './api.service';
 
 @Component({
@@ -15,29 +15,20 @@ export class AppComponent {
 
   locations:any;
   
-  lat:any;
-  lon:any;
-  ApiService: any;
-  
+  lat:number;
+  lon:number;
+  country: string;
+  // ApiService: any;
+  appid: string;
+
+  params = new HttpParams({
+    country = this.country;
+    appid = '&appid=9c8c7922e9fd5eb703a4d593c73decc1';
+  })
+
     constructor(private http: HttpClient){}
     
     getLocations(){
-      this.locations = this.http.get(this.ROOT_URL + 'London&apiid=9c8c7922e9fd5eb703a4d593c73decc1');
-    //   if (navigator){
-
-    //   navigator.geolocation.getCurrentPosition( pos => {
-    //       this.lon = pos.coords.longitude;
-    //       this.lat = pos.coords.latitude;
-    //     });
-
-        
-    //   this.ApiService.getPosition().then(pos=>
-    //       {
-    //          console.log(`Positon: ${pos.lon} ${pos.lat}`);
-    //       });
-    //   }
-     }
+      this.locations = this.http.get(this.ROOT_URL + { params} );
   
- 
-  // ngOnInit(){};
 }
